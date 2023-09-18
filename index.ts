@@ -26,6 +26,16 @@ let titleCaseName = nameOfPerson.toLowerCase().replace(/(?:^|\s)\S/g, (match) =>
 console.log(`Name in title case is `, titleCaseName);                     // Print name in title case
 
 
+// Explaination of above expression:
+
+// / indicates the start of the regular expression.
+// (?: ... ) is a non-capturing group, allowing you to group the following expression without capturing the match.
+// ^ asserts the start of the string.
+// |\s matches either the start of the string or any whitespace character (space, tab, etc.).
+// \S matches any non-whitespace character.
+// g is a global flag, allowing the regular expression to match all occurrences (not just the first one).
+// In summary, the regular expression /(?:^|\s)\S/g is matching the start of the string or any whitespace character, followed by a non-whitespace character. This is used in the replace method to capitalize the first letter of each word, effectively converting the input string to title case.
+
 // 4. Famous Quote: Find a quote from a famous person you admire. Print the quote and the name of its author. Your output should look something like the
 // following, including the quotation marks:
 // Albert Einstein once said, “A person who never made a mistake never tried anything new.”
